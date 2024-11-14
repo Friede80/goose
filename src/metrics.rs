@@ -2030,7 +2030,7 @@ impl GooseMetrics {
         writeln!(
             fmt,
             " {:<24} | {:>6} | {:>6} | {:>6} | {:>6} | {:>6} | {:>6}",
-            "Name", "50%", "75%", "98%", "99%", "99.9%", "99.99%"
+            "Name", "50%", "75%", "95%", "99%", "99.9%", "99.99%"
         )?;
         writeln!(
             fmt,
@@ -2088,7 +2088,7 @@ impl GooseMetrics {
                     request.raw_data.counter,
                     request.raw_data.minimum_time,
                     request.raw_data.maximum_time,
-                    0.98
+                    0.95
                 ),
                 calculate_response_time_percentile(
                     &request.raw_data.times,
@@ -2141,7 +2141,7 @@ impl GooseMetrics {
                     raw_aggregate_response_time_counter,
                     raw_aggregate_min_response_time,
                     raw_aggregate_max_response_time,
-                    0.98
+                    0.95
                 ),
                 calculate_response_time_percentile(
                     &raw_aggregate_response_times,
@@ -2190,7 +2190,7 @@ impl GooseMetrics {
         writeln!(
             fmt,
             " {:<24} | {:>6} | {:>6} | {:>6} | {:>6} | {:>6} | {:>6}",
-            "Name", "50%", "75%", "98%", "99%", "99.9%", "99.99%"
+            "Name", "50%", "75%", "95%", "99%", "99.9%", "99.99%"
         )?;
         writeln!(
             fmt,
@@ -2246,7 +2246,7 @@ impl GooseMetrics {
                         coordinated_omission_data.counter,
                         coordinated_omission_data.minimum_time,
                         coordinated_omission_data.maximum_time,
-                        0.98
+                        0.95
                     ),
                     calculate_response_time_percentile(
                         &coordinated_omission_data.times,
@@ -2312,7 +2312,7 @@ impl GooseMetrics {
                     co_aggregate_response_time_counter,
                     co_aggregate_min_response_time,
                     co_aggregate_max_response_time,
-                    0.98
+                    0.95
                 ),
                 calculate_response_time_percentile(
                     &co_aggregate_response_times,
